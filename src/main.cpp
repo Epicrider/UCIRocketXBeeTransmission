@@ -20,9 +20,12 @@ void setup()
 
 void loop()
 {
+//  if(Serial1.available() != 0) {
+//    Serial.print("RECEIVING");
+//  }
   // Send the message:
   Serial.print(String(count) + ": Sending Message through Serial1...\n");
-  Serial1.print("Hello" + String(count));
+  Serial1.write("At least 12");
   count++;
   delay(1000);
 
